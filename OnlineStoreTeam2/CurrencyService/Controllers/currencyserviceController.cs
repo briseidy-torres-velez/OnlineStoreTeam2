@@ -17,11 +17,6 @@ namespace CurrencyService.Controllers
         [HttpPost]
         public async Task<double> GetExchangeRate(CurrencyChange currencyChange)
         {
-
-
-            //Examples:
-            //from = "EUR"
-            //to = "USD"
             using (var client = new HttpClient())
             {
 
@@ -38,7 +33,6 @@ namespace CurrencyService.Controllers
                 var convert = exchangeValue * currencyChange.Units;
 
                 return convert;
-
 
             }
         }
