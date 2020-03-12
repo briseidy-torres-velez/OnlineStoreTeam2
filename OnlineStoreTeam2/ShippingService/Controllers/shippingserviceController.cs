@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ShippingService.Models;
+using static ShippingService.Models.ShippingModel;
 
 namespace ShippingService.Controllers
 {
@@ -16,7 +17,7 @@ namespace ShippingService.Controllers
     {
 
         [HttpPost]
-        public async Task<double> GetShippingServices(ShippingModel shipping)
+        public async Task<double> GetShippingServices(Cart shipping, double total)
         {
             using (var client = new HttpClient())
             {
@@ -27,11 +28,9 @@ namespace ShippingService.Controllers
 
                 var stringResult = await response.Content.ReadAsStringAsync();
 
-                var dictResult = JsonConvert.DeserializeObject<dynamic>(stringResult);
+                var dictResult = JsonConvert.DeserializeObject<dynamic>(stringResult);            
 
-                var TotalValue = dictResult.rates[$"{shipping.}"];
-
-                var convert = TotalValue * .01;
+                var convert = total * 1.10;
 
                 return convert;
 
