@@ -10,7 +10,7 @@ namespace ShippingService.Models
         public class Cart
         {
             public int UserId { get; set; }
-            public List<Items> Productos { get; set; }
+            //public List<Items> Productos { get; set; }
         }
     }
 }
