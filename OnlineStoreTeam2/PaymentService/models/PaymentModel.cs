@@ -11,4 +11,6 @@ namespace PaymentService.models
         public double TotalToPay { get; set; }
 
     }
+
+
 }
