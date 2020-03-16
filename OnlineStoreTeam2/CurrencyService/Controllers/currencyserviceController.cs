@@ -29,7 +29,7 @@ namespace CurrencyService.Controllers
                 var dictResult = JsonConvert.DeserializeObject<dynamic>(stringResult);
 
                 var exchangeValue = dictResult.rates[$"{currencyChange.CurrencyType}"];
-
+    
                 var convert = exchangeValue * currencyChange.Units;
 
                 return convert;
