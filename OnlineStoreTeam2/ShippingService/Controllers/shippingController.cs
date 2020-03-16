@@ -17,10 +17,7 @@ namespace ShippingService.Controllers
         //TODO
         [HttpPost]
         public double GetShippingServices(Cart cart, double total)
-        {
-            
-                        
-
+        {                                           
                 var convert = total * 1.10;
 
                 return convert;
