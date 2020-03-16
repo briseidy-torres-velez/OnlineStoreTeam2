@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ShippingService.Models;
-using static ShippingService.Models.ShippingModel;
 
 namespace ShippingService.Controllers
 {
@@ -15,7 +14,7 @@ namespace ShippingService.Controllers
     [ApiController]
     public class shippingserviceController : ControllerBase
     {
-
+        //TODO
         [HttpPost]
         public async Task<double> GetShippingServices(Cart shipping, double total)
         {

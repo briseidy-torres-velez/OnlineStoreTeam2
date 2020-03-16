@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService", "PaymentSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShippingService", "ShippingService\ShippingService.csproj", "{067CE97D-5248-497A-9B2A-D416499BC4B5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Currency_Test", "NUnitTest\Currency_Test.csproj", "{0D3BD1D0-126C-4DBA-A6BA-AF0CD1092006}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest_Team2", "NUnitTest\UnitTest_Team2.csproj", "{0D3BD1D0-126C-4DBA-A6BA-AF0CD1092006}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

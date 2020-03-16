@@ -9,8 +9,5 @@ namespace PaymentService.models
     {
         public string TargetNumber { get; set; }
         public double TotalToPay { get; set; }
-
     }
-
-
 }
