@@ -18,7 +18,7 @@ namespace Tests
         [Test]
         public async Task GetExchangeRate_IngresaValores_RegresaConversion()
         {
-            var controller = new currencyserviceController();
+            var controller = new currencyController();
             var currencychange = new CurrencyChange()
             {
                 CurrencyCode = "EUR",

@@ -12,9 +12,11 @@ namespace CurrencyService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class currencyserviceController : ControllerBase
+    public class currencyController : ControllerBase
     {
         // api/currencyservice/
+
+        [Route("conversion")]
         [HttpPost]
         public async Task<double> GetExchangeRate(CurrencyChange currencyChange)
         {
