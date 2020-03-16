@@ -1,7 +1,5 @@
 using CurrencyService.Controllers;
 using CurrencyService.models;
-using PaymentService.Controllers;
-using PaymentService.models;
 
 using NUnit.Framework;
 using System.Threading.Tasks;
@@ -10,7 +8,7 @@ using System;
 
 namespace Tests
 {
-    public class Tests
+    public class UTest_Currency
     {
         [SetUp]
         public void Setup()
@@ -34,24 +32,5 @@ namespace Tests
             var convert = expected * amount;
             Assert.AreEqual(result, convert);
         }
-
-        [Test]
-        public void GetTransactionID_TargetNumber_Test()
-        {
-            var controller = new paymentserviceController();
-            var currencychange = new PaymentModel();
-            {
-                currencychange.TargetNumber = "Test";
-                currencychange.TotalToPay = 1;
-
-            };
-
-            string transactionID = "Test" + DateTime.Today.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
-
-            string result = controller.TransactionID(currencychange);
-            var convert = transactionID;
-            Assert.AreEqual(result, convert);
-        }
-
     }
 }

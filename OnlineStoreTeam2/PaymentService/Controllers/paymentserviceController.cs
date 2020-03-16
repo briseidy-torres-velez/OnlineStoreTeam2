@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PaymentService.models;
+using Microsoft.OpenApi.Models;
+
 
 namespace PaymentService.Controllers
 {
@@ -13,7 +15,7 @@ namespace PaymentService.Controllers
     public class paymentserviceController : ControllerBase
     {
         // POST: api/paymentservice
-        [HttpPost]
+        [HttpPost]        
         public string TransactionID(PaymentModel payment)
         {
             string transactionID = payment.TargetNumber + DateTime.Today.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");

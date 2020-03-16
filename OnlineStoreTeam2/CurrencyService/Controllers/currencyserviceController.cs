@@ -14,6 +14,7 @@ namespace CurrencyService.Controllers
     [ApiController]
     public class currencyserviceController : ControllerBase
     {
+        // api/currencyservice/
         [HttpPost]
         public async Task<double> GetExchangeRate(CurrencyChange currencyChange)
         {
