@@ -5,6 +5,8 @@ using NUnit.Framework;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using CurrencyService.Models;
+using Newtonsoft.Json;
 
 namespace Tests
 {
@@ -30,6 +32,20 @@ namespace Tests
             double expected = 23.7835;
             var amount = 1;
             var convert = expected * amount;
+            Assert.AreEqual(result, convert);
+        }
+
+
+        [Test]
+        public void GetExion()
+        {
+            var controller = new currencyController();
+
+            var result = controller.GetRecomendation();
+            var expected = new Class.Rates();
+            result.ad(expected.MXN);
+            var amount = 1;
+            var convert = expected.MXN * amount;
             Assert.AreEqual(result, convert);
         }
     }

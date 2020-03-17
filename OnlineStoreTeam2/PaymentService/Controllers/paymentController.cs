@@ -12,7 +12,7 @@ namespace PaymentService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class paymentserviceController : ControllerBase
+    public class paymentController : ControllerBase
     {
         // POST: api/paymentservice
         [HttpPost]        
