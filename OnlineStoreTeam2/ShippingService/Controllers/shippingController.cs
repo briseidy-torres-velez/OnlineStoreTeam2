@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using ShippingService.Models;
+
 
 namespace ShippingService.Controllers
 {
@@ -16,11 +16,11 @@ namespace ShippingService.Controllers
     {
         //TODO
         [HttpPost]
-        public double GetShippingServices(Cart cart, double total)
+        public double GetShippingServices( double total)
         {                                           
-                var convert = total * 1.10;
+                var shippingCost = total * .15;
 
-                return convert;
+                return shippingCost;
 
             
         }
