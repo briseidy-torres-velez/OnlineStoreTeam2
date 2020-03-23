@@ -26,33 +26,28 @@ namespace ShippingService.Controllers
             {
                 calculatedShippingCost = ShippingCost
             };
-            var json = JsonConvert.SerializeObject(myjson);
 
-            
+            var json = JsonConvert.SerializeObject(myjson);           
             JObject json2 = JObject.Parse(json);
 
-            return json2;
-
-         
+            return json2;         
         }
 
         [Route("tracking")]
         [HttpPost]
-        public string TrackingID(Shipping shipping)
+        public dynamic TrackingID(Shipping shipping)
         {
             string trackingid = shipping.ZipCode + DateTime.Today.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
-
-
 
             var myjsondata = new
             {
                 trackingID = trackingid
             };
+
             string json = JsonConvert.SerializeObject(myjsondata);
+            JObject json2 = JObject.Parse(json);
 
-
-
-            return json;
+            return json2;
         }
     }
 }

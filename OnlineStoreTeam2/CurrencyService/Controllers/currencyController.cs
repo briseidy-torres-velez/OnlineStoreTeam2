@@ -38,7 +38,7 @@ namespace CurrencyService.Controllers
             }
         }
 
-        //[HttpGet]
+        //[HttpGet] 
         //[Route("")]
         //public ActionResult GetRecomendation()
         //{
