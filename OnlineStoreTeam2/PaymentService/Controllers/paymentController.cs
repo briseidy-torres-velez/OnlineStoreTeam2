@@ -21,6 +21,6 @@ namespace PaymentService.Controllers
             string transactionID = payment.TargetNumber + DateTime.Today.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
             return transactionID;
         }
-        //
+        ///
     }   
 }               
